@@ -2592,10 +2592,12 @@ def submit():
     if enchant27 == "{id:s,lvl:s},":
         enchant27 = ""
 
+    global combo
+
      # if = empty air 0
 
     nbt = ('{Count:1b,Damage:' + box_colourentry.get() +
-          's,Name:"minecraft:shulker_box",Slot:1b,WasPickedUp:0b,tag:{Items:[{Count:'
+          's,Name:"minecraft:' + combo.get() + '",Slot:1b,WasPickedUp:0b,tag:{Items:[{Count:'
            + amount1_ +
           'b,Damage:0s,Name:"minecraft:' + itemname1_ +
           '",Slot:0b,WasPickedUp:0b,tag:{ench:[' + enchant +
@@ -3008,30 +3010,50 @@ r3button9.grid(row=2, column=8, padx=5, pady=5)
 
 # box colour
 box_colour = Label(frameoptions, text="Colour:", font=font, bg="black", fg="green")
-box_colour.grid(row=0, column=0, padx=5, pady=5)
+box_colour.grid(row=1, column=0, padx=5, pady=5)
 box_colourentry = Entry(frameoptions, font=font, bg="black", fg="green")
-box_colourentry.grid(row=0, column=1, padx=5, pady=5)
+box_colourentry.grid(row=1, column=1, padx=5, pady=5)
 
 # box&Item lore
 box_lore = Label(frameoptions, text="Lore:", font=font, bg="black", fg="green")
-box_lore.grid(row=1, column=0, padx=5, pady=5)
+box_lore.grid(row=2, column=0, padx=5, pady=5)
 box_loreentry = Entry(frameoptions, font=font, bg="black", fg="green")
-box_loreentry.grid(row=1, column=1, padx=5, pady=5)
+box_loreentry.grid(row=2, column=1, padx=5, pady=5)
 
 # box name
 box_name = Label(frameoptions, text="Box Name:", font=font, bg="black", fg="green")
-box_name.grid(row=2, column=0, padx=5, pady=5)
+box_name.grid(row=3, column=0, padx=5, pady=5)
 box_nameentry = Entry(frameoptions, font=font, bg="black", fg="green")
-box_nameentry.grid(row=2, column=1, padx=5, pady=5)
+box_nameentry.grid(row=3, column=1, padx=5, pady=5)
 
 # submit
 submit = Button(frameoptions, width=12, text="Submit", font=font, bg="black", fg="green", command=submit)
-submit.grid(row=3, column=1, padx=5, pady=5)
+submit.grid(row=4, column=1, padx=5, pady=5)
 
+#clear all varibles
 clearwhole = Button(frameoptions, width=12, text="clear all", font=font, bg="black", fg="green", command=clearall)
-clearwhole.grid(row=3, column=0, padx=5, pady=5)
+clearwhole.grid(row=4, column=0, padx=5, pady=5)
 
+ # white space filler
 Caplini = Label(frame_tabkit, text="By Caplini", font=("Uni Sans Heavy", 100), bg="black", fg="green")
 Caplini.grid(row=1, column=1, columnspan=10, rowspan=10, sticky="n")
+
+
+# alow selection of container
+options = [
+    "shulker_box",
+    "chest",
+    "trapped_chest",
+    "barrel"
+]
+
+container = StringVar()
+container.set(options[0])
+
+combo = ttk.Combobox(frameoptions, value=options)
+combo.current(0)
+combo.bind("<<ComboboxSelected>>")
+combo.grid(row=0, column=1, padx=5, pady=5, sticky="e")
+
 
 root.mainloop()
