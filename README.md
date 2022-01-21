@@ -1,5 +1,5 @@
 # NBT-Project
-This is a APP for building NBT's
+This is an APP for building NBT's
 
 
 When using this you select a box on kit maker 
