@@ -236,7 +236,10 @@ def box1():
     enchenter1.grid(row=1, column=3, padx=3, pady=3, rowspan=1)
 
     submitchoose = Button(framebox, height=1, padx=12, text="Submit", bg="black", fg="green", command=submitchoose)
-    submitchoose.grid(row=2, column=1, columnspan=4, padx=3, pady=3, rowspan=1)
+    submitchoose.grid(row=2, column=1, rowspan=1, columnspan=4, padx=3, pady=3)
+
+    #nest = Button(framebox, height=1, padx=12, text="Nest", bg="black", fg="green")
+    #nest.grid(row=2, column=3, rowspan=1, columnspan=4, padx=3, pady=3)
 
 
 amount2_ = ""
@@ -2598,6 +2601,70 @@ def submit():
         enchant27 = ""
 
     global combo
+
+    if box_colourentry.get() == "white" or box_colourentry.get() == "white":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(0))
+
+    if box_colourentry.get() == "orange" or box_colourentry.get() == "Orange":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(1))
+
+    if box_colourentry.get() == "magenta" or box_colourentry.get() == "Magenta":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(2))
+
+    if box_colourentry.get() == "light blue" or box_colourentry.get() == "Light Blue":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(3))
+
+    if box_colourentry.get() == "yellow" or box_colourentry.get() == "Yellow":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(4))
+
+    if box_colourentry.get() == "lime" or box_colourentry.get() == "Lime":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(5))
+
+    if box_colourentry.get() == "pink" or box_colourentry.get() == "Pink":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(6))
+
+    if box_colourentry.get() == "gray" or box_colourentry.get() == "Gray":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(7))
+
+    if box_colourentry.get() == "light gray" or box_colourentry.get() == "Light Gray":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(8))
+
+    if box_colourentry.get() == "cyan" or box_colourentry.get() == "Cyan":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(9))
+
+    if box_colourentry.get() == "purple" or box_colourentry.get() == "Purple":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(10))
+
+    if box_colourentry.get() == "blue" or box_colourentry.get() == "Blue":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(11))
+
+    if box_colourentry.get() == "brown" or box_colourentry.get() == "Brown":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(12))
+
+    if box_colourentry.get() == "green" or box_colourentry.get() == "Green":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(13))
+
+    if box_colourentry.get() == "red" or box_colourentry.get() == "Red":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(14))
+
+    if box_colourentry.get() == "black" or box_colourentry.get() == "Black":
+        box_colourentry.delete(0, END)
+        box_colourentry.insert(0, str(15))
 
      # if = empty air 0
 
