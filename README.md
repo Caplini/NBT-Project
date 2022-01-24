@@ -2,7 +2,7 @@
 
 May require your to run:
 - ```pip install pyperclip```
-In cmd (windows + r cmd)
+- In cmd (windows + r cmd)
 
 
 
