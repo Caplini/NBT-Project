@@ -1,3 +1,11 @@
+Python is required
+
+May require your to run:
+  pip install pyperclip
+In cmd (windows + r cmd)
+
+
+
 # NBT-Project
 This is an APP for building NBT's
 
