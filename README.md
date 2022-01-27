@@ -1,3 +1,5 @@
+# https://discord.gg/ZpSJDDFf
+
 # Python is required
 
 May require your to run:
