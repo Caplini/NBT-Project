@@ -1,8 +1,11 @@
+from re import L
 import tkinter
 from tkinter import *
 from tkinter.font import Font
 from tkinter import ttk
+from unittest import TextTestResult
 import pyperclip
+import time
 
 ench__ = "" # placeholder nbt
 ench__2 = ""
@@ -2628,7 +2631,7 @@ def nest1():
                           'b,Damage:0s,Name:"minecraft:' + _1nestitemname10_ +
                           ',Slot:9b,WasPickedUp:0b,tag:{ench:[' + _1nestenchant10 +
                           ']}},{Count:' + _1nestamount11_ +
-                          'b,Damage:10s,Name:"minecraft:' + _1nestitemname11_ +
+                          'b,Damage:0s,Name:"minecraft:' + _1nestitemname11_ +
                           ',Slot:10b,WasPickedUp:0b,tag:{ench:[' + _1nestenchant11 +
                           ']}},{Count:' + _1nestamount12_ +
                           'b,Damage:0s,Name:"minecraft:' + _1nestitemname12_ +
@@ -6057,7 +6060,7 @@ def box1():
     submitchoose = Button(framebox, height=1, padx=12, text="Submit", bg="black", fg="green", command=submitchoose)
     submitchoose.grid(row=2, column=1, rowspan=1, columnspan=4, padx=3, pady=3)
 
-    nest = Button(framebox, height=1, padx=12, text="Nest", bg="black", fg="green", command=nest)
+    nest = Button(framebox, width=1, height=1, padx=12, text="Nest", bg="black", fg="green", command=nest)
     nest.grid(row=2, column=3, rowspan=1, columnspan=4, padx=3, pady=3)
 
 
@@ -6142,8 +6145,28 @@ def box2():
     submitchoose = Button(framebox, height=1, padx=12, text="Submit", bg="black", fg="green", command=submitchoose)
     submitchoose.grid(row=2, column=1, columnspan=4, padx=3, pady=3, rowspan=1)
 
-    nest = Button(framebox, height=1, padx=12, text="Nest", bg="black", fg="green", command=nest)
+    nest = Button(framebox, width=1, height=1, padx=12, text="Nest", bg="black", fg="green", command=nest)
     nest.grid(row=2, column=3, rowspan=1, columnspan=4, padx=3, pady=3)
+
+
+    # def dad0_0():
+    #     global itemname2_
+    #     global amount2_
+    #     global enchant2
+
+    #     r1button2.config(bg="#ff16fb")
+    #     pop.destroy()
+
+    #     itemname2_ += str('milk_bucket",tag:{display:{Name:"Dad Left",Lore:["https://www.wikihow.com/Leave-Your-Wife"]}}')
+    #     itemname2_ = itemname2_
+
+    #     amount2_ += str(1)
+    #     amount2_ = amount2_
+
+    #     enchant2 += '{id:28s,lvl:100s},'
+
+    # dad = Button(framebox, width=1, height=1, padx=12, text="dad?", bg="black", fg="white", command=dad0_0)
+    # dad.grid(row=2, column=2, rowspan=1, padx=3, pady=3, sticky="n")
 
 amount3_ = ""
 itemname3_ = ""
@@ -8622,10 +8645,15 @@ def submit():
         nbt.insert(int(_2nestchar), "}")
         nbt = "".join(nbt)
 
+    copied.grid(row=5, column=1, padx=5, pady=5)
+
     #print(nbt)
     pyperclip.copy(nbt)
 
 def clearall():
+
+    copied.grid_forget()
+
     global enchant
     global enchant2
     global enchant3
@@ -8900,6 +8928,10 @@ def clearall():
     global _2nestamount10_
     global _2nestenchant10
 
+    global _2nestitemname11_
+    global _2nestamount11_
+    global _2nestenchant11
+
     global _2nestitemname12_
     global _2nestamount12_
     global _2nestenchant12
@@ -8970,6 +9002,115 @@ def clearall():
     _1nesteditemname1_ = ""
     _2nesteditemname1_ = ""
 
+    _2nestitemname1_ = ""
+    _2nestamount1_ = ""
+    _2nestenchant1 = ""
+
+    _2nestitemname2_ = ""
+    _2nestamount2_ = ""
+    _2nestenchant2 = ""
+
+    _2nestitemname3_ = ""
+    _2nestamount3_ = ""
+    _2nestenchant3 = ""
+
+    _2nestitemname4_ = ""
+    _2nestamount4_ = ""
+    _2nestenchant4 = ""
+
+    _2nestitemname5_ = ""
+    _2nestamount5_ = ""
+    _2nestenchant5 = ""
+
+    _2nestitemname6_ = ""
+    _2nestamount6_ = ""
+    _2nestenchant6 = ""
+
+    _2nestitemname7_ = ""
+    _2nestamount7_ = ""
+    _2nestenchant7 = ""
+
+    _2nestitemname8_ = ""
+    _2nestamount8_ = ""
+    _2nestenchant8 = ""
+
+    _2nestitemname9_ = ""
+    _2nestamount9_ = ""
+    _2nestenchant9 = ""
+
+    _2nestitemname10_ = ""
+    _2nestamount10_ = ""
+    _2nestenchant10 = ""
+
+    _2nestitemname11_ = ""
+    _2nestamount11_ = ""
+    _2nestenchant11 = ""
+
+    _2nestitemname12_ = ""
+    _2nestamount12_ = ""
+    _2nestenchant12 = ""
+
+    _2nestitemname13_ = ""
+    _2nestamount13_ = ""
+    _2nestenchant13 = ""
+
+    _2nestitemname14_ = ""
+    _2nestamount14_ = ""
+    _2nestenchant14 = ""
+
+    _2nestitemname15_ = ""
+    _2nestamount15_ = ""
+    _2nestenchant15 = ""
+
+    _2nestitemname16_ = ""
+    _2nestamount16_ = ""
+    _2nestenchant16 = ""
+
+    _2nestitemname17_ = ""
+    _2nestamount17_ = ""
+    _2nestenchant17 = ""
+
+    _2nestitemname18_ = ""
+    _2nestamount18_ = ""
+    _2nestenchant18 = ""
+
+    _2nestitemname19_ = ""
+    _2nestamount19_ = ""
+    _2nestenchant19 = ""
+
+    _2nestitemname20_ = ""
+    _2nestamount20_ = ""
+    _2nestenchant20 = ""
+
+    _2nestitemname21_ = ""
+    _2nestamount21_ = ""
+    _2nestenchant21 = ""
+
+    _2nestitemname22_ = ""
+    _2nestamount22_ = ""
+    _2nestenchant22 = ""
+
+    _2nestitemname23_ = ""
+    _2nestamount23_ = ""
+    _2nestenchant23 = ""
+
+    _2nestitemname24_ = ""
+    _2nestamount24_ = ""
+    _2nestenchant24 = ""
+
+    _2nestitemname25_ = ""
+    _2nestamount25_ = ""
+    _2nestenchant25 = ""
+
+    _2nestitemname26_ = ""
+    _2nestamount26_ = ""
+    _2nestenchant26 = ""
+
+    _2nestitemname27_ = ""
+    _2nestamount27_ = ""
+    _2nestenchant27 = ""
+
+    
 
 
 font = Font(family="Uni Sans Heavy")  # font
@@ -9090,6 +9231,11 @@ clearwhole.grid(row=4, column=0, padx=5, pady=5)
  # white space filler
 Caplini = Label(frame_tabkit, text="By Caplini", font=("Rage Italic", 75), bg="#232528", fg="white")
 Caplini.grid(row=1, column=1, pady=25, columnspan=10, rowspan=10)
+
+
+copied = Label(frameoptions, text="Copied!", font=font, bg="#232528", fg="green")
+copied.grid(row=5, column=1, padx=5, pady=5)
+copied.grid_forget()
 
 
 # alow selection of container
