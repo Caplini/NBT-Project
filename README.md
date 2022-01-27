@@ -24,3 +24,5 @@ you will then hit submit and you will notice the selected box will go green
 
 next you will enter Colour, Lore and Box Name. These must be inputed for the nbt to work
 after completing this you can hit submit and the NBT will be on your clip board
+
+https://www.youtube.com/watch?v=bE7VCTOZNGE
